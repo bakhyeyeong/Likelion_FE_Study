@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            /* wrap은 넓이를 다 포함하지 못할 경우에 개행하게 함 */
+        }
+        .item{
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .item:nth-child(2){
+            flex-basis: 100px;
+            width: 150px;
+            /* 
+                주 축에 따라 basis가 넓이, 높이가 될 수있다. 
+                2개의 값이 있을 때 basis를 우선적용
+                width는 넓이를 강제하여 반응형 X, basis는 컨텐츠의 크기만큼 늘어남 
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">22222222222</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

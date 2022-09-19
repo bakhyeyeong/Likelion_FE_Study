@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .item{
+            flex-grow: 1;
+            width: 100px;
+            height: 50px;
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .item:nth-child(2)
+        {   
+        /* 
+           1. 기본 값은 1 -> 0으로 바꾸면
+            더 줄어들지 않게 하기 위해서 사용
+        */
+        flex-shrink: 0;
+        flex-basis: 200px;
+        /* 
+        flex특성을 주면 한번에 지정가능하다.(축약속성)
+        flex: grow shrink basis;
+        flex: 1 0 300px;
+         */
+        }
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
