@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./nomalize.css">
+  <title>Document</title>
+  <style>
+    #app{
+      width: 100vw;
+      height: 100vh;
+      perspective: 1600px;
+    }
+    .list-item{
+      position:fixed;
+      width: 340px;
+      height: 400px;
+      /* 중앙정렬 코드 */
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%) rotateY(100deg);
+      /* preserve속성 자식들에게도 전파 */
+      transform-style: preserve-3d;
+    }
+    .list-item li{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      /* 뒷면 안보이게 설정 */
+      backface-visibility: hidden;
+    }
+    .list-item li img{
+      /* 사진 비율 고정 */
+      object-fit: contain;
+      width:100%;
+      height: 100%;
+    }
+    .list-item li:nth-child(1){
+      /* 계산 calc() */
+      transform: rotateY(0) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(2){
+      transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(3){
+      transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(4){
+      transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(5){
+      transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(6){
+      transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/3.14/2));
+    }
+    .list-item li:nth-child(7){
+      transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/3.14/2));
+    }
+  </style>
+</head>
+<body>
+  <article id="app">
+    <h2>포켓몬 회전목마</h2>
+    <ul class="list-item">
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
+    </ul>
+  </article>
+</body>
+</html>
