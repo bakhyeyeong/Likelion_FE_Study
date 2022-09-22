@@ -1,0 +1,70 @@
+<!--
+    - sprite기법의 단점
+    1. 관리가 어렵다
+    -> 하나요소를 수정하려면 손이 많이간다. 
+    2. (스프라이트 이미지를 용도별로 분리하는 것이 좋다)
+
+    - sprite기법의 장점
+    1. 이미지 렌더링 시간이 줄어든다.
+    2. 용량 절약이된다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Document</title>
+</head>
+<style>
+/* 
+.bg-icon_Triangle_down {
+    width: 10px; height: 10px;
+    background: url('css_sprites.png') -10px -52px;
+}
+.bg-icon_Triangle_up {
+    width: 10px; height: 10px;
+    background: url('css_sprites.png') -40px -52px;
+}
+*/
+        .txt-hide{
+            position:absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .label-hold::before{
+            /* 가상요소는 기본 dis 인라인, content 속성을 넣지않으면 가상요소는 존재하지 않는 것이 되므로 꼭!! 사용*/
+            vertical-align: -5px;
+            display: inline-block;
+            content: ' ';
+            background: url("./images/css_sprites_retina.png") -52px -10px;
+            background-size: 84px 42px;
+            width: 22px; 
+            height: 22px;
+        }
+        .inp-hold:checked+.label-hold::before{
+            /* 체크박스를 선택했을 때 인접한 라벨의 가상요소의 백그라운드 이미지를 바꿈 */
+            width: 22px; height: 22px;
+            background: url("./images/css_sprites_retina.png") -10px -10px;
+            background-size: 84px 42px;
+        }
+        .inp-hold:focus+.label-hold::before{
+            /* 포커싱된 요소에 박스를 그려줌 보더는 레이아웃에 영향을 미치지만 아웃라인은 레이아웃에 영향을 미치지 않음! */
+            outline: 2px solid black;
+            /* 아웃라인에 여유공간줌 */
+            outline-offset: 5px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 체크박스의 아이디와 라벨의 for를 연결해줘야함 -->
+    <input type="checkbox" id="inpHold" class="inp-hold txt-hide">
+    <label for="inpHold" class="label-hold">선택해주세요</label>
+</body>
+</html>
+</html>
