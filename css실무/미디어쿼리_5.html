@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .item {
+            width: 50%;
+            padding: 1rem;
+            border: solid 5px black;
+            box-sizing: border-box;
+            background-color: sienna;
+        }
+        /* 미디어쿼리는 보통 css 가장 하단에 위치시킨다. */
+        /* 스크린이 있는 기기 (논리연산자) landscape 옆으로 뒤집었을 때 */
+        /* 미디어 쿼리안에서는 선택자를 다시 써줘야 함 */
+        @media screen and (orientation: landscape){
+            body {
+                background-color: yellow;
+            }
+
+            .item-lg {
+                width: 100%;
+            }
+        }        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+        <div class="item item-lg item-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur nemo nobis! Commodi doloribus iure fugiat odio corporis vel consequatur autem, hic accusantium optio, cum soluta vitae quasi sint. Quaerat!
+        </div>
+    </div>
+</body>
+</html>
