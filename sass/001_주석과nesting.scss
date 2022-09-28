@@ -1,0 +1,18 @@
+ul{
+    li{
+        color: red;
+        font-size: 10px;
+    }
+}
+.one{
+    color: red;
+    .two{
+        color: green;
+        .three{
+            color: blue;
+        }
+        .four{
+            color:black;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.one{
+    font-size: 10px + 10px;
+}
+.two{
+    font-size: 10px - 10px;
+}
+.three{
+    font-size: (10px / 10px);
+}
+// 에러
+// .four{
+//     font-size: 10px * 10px;
+// }
+// 에러
+//.five{
+//     font-size: 10px ** 10px;
+// }
+.six{
+    font-size: 10px % 10px;
+}
