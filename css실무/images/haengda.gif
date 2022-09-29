@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://bakhyeyeong.github.io/design_contest/haengda.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./haengda_files/haengda.css">
+    <link rel="stylesheet" href="./haengda_files/reset.css">
+    <title></title>
+</head>
+<body>
+    <div>
+<div class="haengda">
+    <div class="ear left">
+        <div class="clover one"></div>
+        <div class="clover two"></div>
+        <div class="clover three"></div>
+        <div class="clover four"></div>
+    </div>
+    <div class="ear right"></div>
+
+    <div class="face top"></div>
+    <div class="face bottom">
+        <div class="patten first"></div>
+        <div class="patten second"></div>
+        <div class="patten third"></div>
+        <div class="eye left">
+            <div class="light lefttop"></div>
+            <div class="light leftmid"></div>
+        </div>
+        <div class="eye right">
+            <div class="light righttop"></div>
+            <div class="light rightmid"></div>
+        </div>
+        <div class="flush left">
+            <div class="flush_act leftone"></div>
+            <div class="flush_act lefttwo"></div>
+        </div>
+        <div class="flush right">
+            <div class="flush_act rightone"></div>
+            <div class="flush_act righttwo"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="mouse left"></div>
+        <div class="mouse right"></div>
+        <div class="mouse act"></div>
+    </div>
+</div>
+
+</div></body></html>

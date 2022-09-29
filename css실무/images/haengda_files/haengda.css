@@ -1,0 +1,498 @@
+/* animation */
+@keyframes right-ear {
+    from {
+        transform: rotate(35deg);
+    }
+    to {
+        transform: rotate(40deg) translate(5px);
+    }
+}
+
+@keyframes left-ear {
+    from {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(-40deg) translate(-5px);
+    }
+}
+@keyframes mouse-act {
+    0%{
+        width: 40px;
+        height: 0px;
+    }
+    40%{
+        width: 40px;
+        height: 6px;
+    }
+    60%{
+        width: 40px;
+        height: 10px;
+    }
+    90%{
+        width: 40px;
+        height: 15px;
+    }
+    to {
+        width: 40px;
+        height: 18px;
+    }
+}
+@keyframes flush-act {
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0.3;
+    }
+    60%{
+        opacity: 0.7;
+    }
+    90%{
+        opacity: 0.9;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes eye-light-top {
+    50% {
+        transform: rotate(-30deg) translate(-2px);
+    }
+}
+@keyframes eye-light-mid {
+    50% {
+        transform: rotate(-30deg) translate(2px);
+    }
+}
+
+/* design */
+:root {
+    --skin: #F7F6DC;
+    --clover: #91d290;
+    --line: #a16d55;
+    --flush:#f6c4c5;
+    --topflush:#f2858a;
+    width: 100%;
+    height: 100%;
+    border: 10px solid var(--clover);
+}
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+body {
+    background: #B1D7B4;
+}
+.haengda{
+    z-index: 0;
+    position: relative;
+    top: 1px;
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+}
+/* 얼굴 */
+.haengda .face.top{
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    width: 350px;
+    height: 310px;
+    border-radius: 50%;
+    border: 10px solid var(--line);
+    background: var(--skin);
+}
+.haengda .face.bottom{
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    width: 400px;
+    height: 210px;
+    border-radius: 50%;
+    border: 10px solid var(--line);
+    background: var(--skin);
+}
+.haengda .face.bottom::before{
+    z-index: 3;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 330px;
+    height: 290px;
+    border-radius: 50%;
+    background: var(--skin);
+}
+/* 귀 */
+.haengda .ear{
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 110px;
+    border: 10px solid var(--line);
+    border-radius: 50%;
+    background: var(--skin);
+}
+.haengda .ear.left{
+    z-index: 2;
+    top: 30px;
+    left: 40px;
+    transform: rotate(-10deg);
+    border-radius: 50%;
+    animation: left-ear 0.5s infinite alternate;
+}
+.haengda .ear.left .clover{
+    z-index: 2;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: var(--clover);
+    
+}
+.haengda .ear.left .clover.one{
+    top: 15px;
+    left: 25px;
+    transform: rotate(20deg);
+    border-radius: 50% 50% 0;
+}
+.haengda .ear.left .clover.two{
+    top: 25px;
+    left: 45px;
+    transform: rotate(120deg);
+    border-radius: 50% 50% 0;
+}
+.haengda .ear.left .clover.three{
+    top: 45px;
+    right: 40px;
+    transform: rotate(210deg);
+    border-radius: 50% 50% 0;
+}
+.haengda .ear.left .clover.four{
+    top: 35px;
+    left: 15px;
+    transform: rotate(300deg);
+    border-radius: 50% 50% 0;
+}
+.haengda .ear.right{
+    z-index: 2;
+    top: 30px;
+    right: 40px;
+    transform: rotate(10deg);
+    border-radius: 50%;
+    animation: right-ear 0.5s infinite alternate;
+}
+/* 패턴 */
+.haengda .face.bottom .patten{
+    z-index: 4;
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    background: var(--line);
+}
+.haengda .face.bottom .patten.first{
+    bottom: 234px;
+    left: 179px;
+    height: 65px;
+    border-radius: 0 0 50% 50%;
+}
+.haengda .face.bottom .patten.first::after{
+    content: " ";
+    position: absolute;
+    top:25px;
+    width: 22px;
+    height: 40px;
+    border-radius: 0 0 50% 50%;
+    background: var(--line);
+}
+.haengda .face.bottom .patten.second{
+    bottom: 255px;
+    left: 149px;
+    border-radius: 0 0 50% 50%;
+}
+.haengda .face.bottom .patten.third{
+    bottom: 255px;
+    right: 149px;
+    border-radius: 0 0 50% 50%;
+}
+/* 눈 */
+.haengda .face.bottom .eye{
+    z-index: 4;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--line);
+}
+.haengda .face.bottom .eye.left{
+    left: 90px;
+    border-radius:50%;
+}
+.haengda .face.bottom .eye.left .light{
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background: #FFF;
+}
+.haengda .face.bottom .eye.left .light.lefttop{
+    top:5px;
+    right: 18px;
+    border-radius:50%;
+    animation: eye-light-top 0.7s infinite alternate;
+}
+.haengda .face.bottom .eye.left .light.leftmid{
+    top:39px;
+    right: 12px;
+    width: 17px;
+    height: 15px;
+    transform: rotate(-30deg);
+    border-radius:50%;
+    animation: eye-light-mid 0.7s infinite alternate;
+}
+.haengda .face.bottom .eye.right{
+    right: 90px;
+    border-radius:50%;
+}
+.haengda .face.bottom .eye.right .light{
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background: #FFF;
+}
+.haengda .face.bottom .eye.right .light.righttop{
+    top:5px;
+    right: 18px;
+    border-radius:50%;
+    animation: eye-light-top 0.7s infinite alternate;
+}
+.haengda .face.bottom .eye.right .light.rightmid{
+    top:39px;
+    right: 12px;
+    width: 17px;
+    height: 15px;
+    transform: rotate(-30deg);
+    border-radius:50%;
+    animation: eye-light-mid 0.7s infinite alternate;
+}
+/* 코 */
+.haengda .face.bottom .nose{
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top:65px;
+    left: 180px;
+    background: var(--line);
+    transform: rotate(45deg);
+    border-radius: 89% 11% 7% 93% / 90% 92% 8% 10% ;
+}
+.haengda .face.bottom .nose::after{
+    z-index: 5;
+    position: absolute;
+    content: " ";
+    width: 4px;
+    height: 3px;
+    top:14px;
+    left: 2px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    background: #FFF;
+}
+/* 입 */
+.haengda .face.bottom .mouse{
+    z-index: 4;
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    background: var(--line);
+}
+.haengda .face.bottom .mouse.left{
+    top:105px;
+    right: 187px;
+    transform: rotate(-40deg);
+}
+.haengda .face.bottom .mouse.left::after{
+   content: " ";
+   position: absolute;
+   width: 5px;
+   height: 5px;
+   left:-2.5px;
+   border-radius: 50%;
+   background-color: var(--line);
+}
+.haengda .face.bottom .mouse.left::before{
+    content: " ";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right:-2.5px;
+    border-radius: 50%;
+    background-color: var(--line);
+    transform: rotate(40deg);
+ }
+.haengda .face.bottom .mouse.right{
+    top:105px;
+    left: 187px;
+    transform: rotate(40deg);
+}
+.haengda .face.bottom .mouse.right::after{
+    content: " ";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right:-2.5px;
+    border-radius: 50%;
+    background-color: var(--line);
+}
+.haengda .face.bottom .mouse.act{
+    z-index: 3;
+    width: 40px;
+    height: 0px;
+    left: 170px;
+    top:100px;
+    animation: 0.7s mouse-act 0.5s ease-out infinite alternate;
+    background-color: var(--flush);
+}
+.haengda .face.bottom .mouse.act::before{
+    z-index: 5;
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 20px;
+    top: -12px;
+    left: -10px;
+    transform: rotate(-40deg);
+    background: var(--skin);
+}
+.haengda .face.bottom .mouse.act::after{
+    z-index: 5;
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 20px;
+    top: -12px;
+    right: -10px;
+    transform: rotate(40deg);
+    background-color: var(--skin);
+}
+/* 볼터치 */
+.haengda .face.bottom .flush{
+    z-index: 4;
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background: var(--flush);
+}
+.haengda .face.bottom .flush.left{
+    top: 65px;
+    left: 30px;
+    border-radius: 50%;
+}
+.flush_act{
+    z-index: 5;
+    position:absolute;
+    width: 5px;
+    height: 30px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.left .flush_act.leftone{
+    top: 10px;
+    left: 45px;
+    transform: rotate(35deg);
+    animation: 0.7s flush-act 0.5s infinite alternate;
+}
+.haengda .face.bottom .flush.left .flush_act.leftone::before{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.left .flush_act.leftone::after{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.left .flush_act.lefttwo{
+    top: 10px;
+    left: 25px;
+    transform: rotate(35deg);
+    animation: 0.7s flush-act 0.5s infinite alternate;
+}
+.haengda .face.bottom .flush.left .flush_act.lefttwo::before{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.left .flush_act.lefttwo::after{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.right{
+    top: 65px;
+    right: 30px;
+    border-radius: 50%;
+}
+.haengda .face.bottom .flush.right .flush_act.rightone{
+    top: 10px;
+    right: 45px;
+    transform: rotate(35deg);
+    animation: 0.7s flush-act 0.5s infinite alternate;
+}
+.haengda .face.bottom .flush.right .flush_act.rightone::before{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.right .flush_act.rightone::after{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.right .flush_act.righttwo{
+    top: 10px;
+    right: 25px;
+    transform: rotate(35deg);
+    animation: 0.7s flush-act 0.5s infinite alternate;
+}
+.haengda .face.bottom .flush.right .flush_act.righttwo::before{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: -2.5px;
+    background: var(--topflush);
+}
+.haengda .face.bottom .flush.right .flush_act.righttwo::after{
+    content: " ";
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -2.5px;
+    background: var(--topflush);
+}
