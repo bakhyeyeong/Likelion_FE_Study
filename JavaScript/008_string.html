@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // string, 문자열의 메서드 txt.~~~
+        let txt="ABCDEF";
+        let txt2 ="mom said 'hello'";
+        let txt3="mom said \"hello \"";
+        let txt4=" a\n b\tc";
+        let txt5="10.1abc";
+        console.log(txt + txt);
+        console.log(txt[0]);
+        console.log(txt[3]+txt[4]+txt[5]);
+        console.log(txt2);
+        console.log(txt3);
+        console.log(txt4);
+        console.log(txt5);
+        console.log(txt5[2]); //\t를 한개의 문자열로 인식한다.
+        console.log(txt5+txt5);
+
+        // parseInt는 숫자와 문자가 같이 있는 문자열에서 숫자 부분만 뽑아냄(소수점X)
+        // Number는 숫자만 있는 문자열에서 소수점 포함 숫자부분 뽑아냄 
+        console.log(parseInt(txt5)+parseInt(txt5));
+        console.log(parseFloat(txt5)+parseFloat(txt5));
+        // console.log(Number(txt5)+Number(txt5));
+
+        console.log(typeof txt);
+        console.dir(txt2);
+
+        // 길이를 뽑아냄, index는 length - 1
+        console.log(txt.length);
+        // indexOf는 정규표현식을 허용하지 않는다.
+        console.log(txt.indexOf("E"));
+        console.log(txt.search("E"));
+
+        // 발견하지 못했을 경우 -1 리턴
+        console.log(txt.indexOf("z"));
+        console.log(txt.search("z"));
+
+        // search 정규표현식의 표현식을 찾는 코드 
+        // /h[eao]llo/하면 hello, hallo, hollo 모두 선택됨
+        let regExp = /CD/; //안에 들어가는 것이 패턴
+        console.log(txt.search(regExp));
+    </script>
+</body>
+</html>

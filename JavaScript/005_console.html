@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+        // 그냥 출력했을 때에는 알파벳순 출력
+        // 순회를 돌았을 때에는 순서 보장
+        let data ={
+            one:1,
+            two:2,
+            three:3,
+        };
+        console.dir(data);
+
+        let data2=[10,20,30];
+        console.dir(data2);
+        
+        console.info("hello world");
+        // 계층구조를 표기할 때 그룹을 사용
+        console.group("one");
+        console.log("혜영");
+        console.log("대환");
+        console.group("two");
+        console.log("혜진");
+        console.log("먼지");
+        console.groupEnd();
+        console.log("end");
+        console.groupEnd();
+        console.log("end");
+        
+        console.table(data);
+        console.table(data2);
+
+        console.error("error");
+
+        console.warn("실행은 되는데 경고문구 읽어보기");
+    </script>
+</body>
+</html>
