@@ -53,8 +53,8 @@
             let c = 30;
             let e = { a, b, c };
             console.log(e);
-
-            // let test = {'one', 'two', 'three'}
+            console.log("------------------");
+            // let test = {'one', 'two', 'three'};
             // console.log(test);
 
             // 4. 값을 변경할 수 있습니다.
@@ -116,7 +116,8 @@
             // newuser["name"] = 회원정보업데이트["name"];
             // newuser["email"] = 회원정보업데이트["email"];
             // console.log(newuser);
-
+            console.log(newuser);
+            console.log("-------------");
             newuser={ ...newuser, ...회원정보업데이트};
             console.log(newuser);
 
@@ -127,10 +128,10 @@
             // console.log(newuser2);
 
             // spread 기법을 사용하면 원본을 만지지않고 사용가능
-            // let newuser2= {...newuser};
-            // newuser2["id"]="helloworld";
-            // console.log(newuser);
-            // console.log(newuser2);
+            let newuser2= {...newuser};
+            newuser2["id"]="helloworld";
+            console.log(newuser);
+            console.log(newuser2);
 
 
             // 함수는 후에 자세히 다룹니다.

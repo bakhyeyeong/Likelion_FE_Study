@@ -24,6 +24,7 @@
             let data2 = new Array(5);
             console.log(data2);
 
+            console.log("-------");
             let data3 = new Array("사과", "수박", "복숭아", "딸기", "바나나");
             console.log(data3);
 
@@ -31,7 +32,9 @@
 
             // 아이템 삭제.
             data3.splice(3, 1); // 3번 인덱스 요소 하나만 삭제
+            console.log(data3);
             data3.splice(3); // 3번 인덱스부터 전부 삭제
+            console.log(data3);
 
             // 아이템 추가
             data3.splice(3, 0, "한라봉");
@@ -41,6 +44,10 @@
             console.log(data3);
 
             data3.splice(3, 0, ["포도", "체리"]);
+            console.log(data3);
+            
+            // spread용법 사용 시 리터럴 문법처럼 array(2)로 표기 되지 않고 펼쳐져서 일반 요소처럼 들어감
+            data3.splice(3, 0,...["감", "앵두"]);
             console.log(data3);
 
             
