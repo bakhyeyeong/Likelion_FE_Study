@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        // value의 모음 (대부분 동일한 자료의 형태가 반복, 값의 변경 가능)
+        let 과일=['사과','수박','복숭아','딸기','바나나'];
+        console.log(과일[1]);
+        let 꺼낸과일 = 과일.pop();//바나나가 꺼낸과일으로 빠짐
+        console.log(과일);
+
+        과일.push("멜론");//멜론이 과일리스트 마지막에 들어감
+        console.log(과일);
+
+        과일.push(꺼낸과일);//꺼낸과일에 있던 바나나가 과일리스트 마지막에 들어감
+        console.log(과일);
+
+         //0. 행렬의 연산
+         let array=[
+            [1,2,3],[4,5,6],[7,8,9]
+        ]
+        //console.log(array[1][2]); 면 6
+        // TMI (다른 자료형의 모음으로도 사용 가능)
+        function sum(x,y){
+            return x+y
+        }
+        let test=[1,2,3];
+        let obj={'one':1, 'two':2};
+        let data=[console.log, sum,test, obj]
+        // data[2][1] 2차원배열
+
+
+//원본수정없이 값을 수정하고 싶을 때
+// spread 용법을 이용하여 새로운 객체에 넣는다.
+let x=[10,20,30,40];
+console.log([...x].pop());
+console.log(x);
+
+let y=[...x];
+y.pop();
+console.log(y);
+    </script>
+</body>
+</html>

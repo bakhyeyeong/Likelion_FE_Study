@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //true와 숫자값의 비교
+        console.log(true==1);
+        console.log(false==0);
+        console.log(true===1);
+        console.log(false===0);
+
+        console.log("- 1 -");
+        // NaN만 자기자신이 자기자신이 아닌 특이 케이스
+        console.log(NaN==NaN); //false
+        console.log(NaN===NaN); //false
+
+        console.log("- 2 -");
+        // true일 것 같이 혼란스러운 녀석들
+        console.log(false == null); //F
+        console.log(false == undefined);//F
+        
+        console.log("- 3 -");
+        // + 연산자를 이용한 형변환
+        // 암묵적 형변환은 의도를 파악하기 어려워서 사용 자제
+        console.log(+false); //숫자로 변환 0
+        console.log(Number(false); // 명시적 형변환 숫자로 변환 0
+        console.log(+true); //숫자로 변환 1
+        console.log(false*1);
+        console.log(true*1);
+        console.log(1+""); //string
+        console.log(NaN+""); //-> "NaN"
+        console.log(Infinity+""); // ->"Infinity"
+        console.log(true+""); //true 
+        console.log(false+""); //false
+        console.log("12"+1); //string
+        console.log(+"100"+10);//숫자로 변환 100+10 = 110
+
+        console.log("2"+"2"-"2");
+        console.log("2"+"2"); //string에 붙이기로 이해
+        console.log("2"-"2"); //수학적 연산으로 이해-> number로 반환
+        console.log("a"-"a"); //NaN
+    </script>
+</body>
+</html>
