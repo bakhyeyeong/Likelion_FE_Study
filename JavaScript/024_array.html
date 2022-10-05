@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 배열을 생성하는법은 두가지가 있다
+        // 첫번째는 리터럴로 생성
+        // let myarray=[];
+        // 두번째는 배열생성함수를 이용하여 생성
+
+        // let myarray =new Array(5);
+        // let myObj = {
+        //     val1: 10,
+        //     val2: 30
+        // }
+
+        // let fruit = (["메론", "수박"], ["포도", "체리"]);
+
+        // // 배열안 배열일때 ([].[])
+        // let fish = ["정어리", "고등어", "참치"]
+        // //일반적 배열 방법 []
+        // let myobj = { val1: 10, val2: 30 }
+        // //키와 value가 있을때 {}
+
+        let myarry = [];
+
+        let myArray = new Array(5);
+
+        console.log(myArray);
+
+        let myArray2 = new Array(5, 3, 2);
+        console.log(myArray2);
+
+        myArray2[0] = 100;
+        "hello"[2];
+
+        console.log([1, 2, 3, 4][2]);
+
+        //slice 문제 (splice와 달리 원본수정 X)
+        let fish=['정어리','고등어','돌고래','참치','고래상어','코끼리'];
+        //물고기가 아닌 것을 slice로 선택해 출력 돌고래 코끼리
+        console.log(fish);
+        console.log(fish.slice(2,3));
+        console.log(fish.slice(5,6));
+        console.log(fish.slice(-1));
+
+
+        console.cafe =['tea','coffee','tea',]
+
+        //map
+        // arr.map(i => i.name);
+
+        // arr.map(function (i) {
+        //     return i.name
+        // });
+
+        const studentList = [
+            {
+                id: 1, name: '원범', score: 'great'
+            },
+            {
+                id: 2, name: '김진', score: 'nice'
+            },
+            {
+                id: 3, name: '혜원', score: 'good'
+            },
+            {
+                id: 4, name: '재현', score: 'too cool for school'
+            }
+        ];
+
+        //위 배열에서 네임값만 뽑아서 새로운 배열생성
+        const myarr1 =studentList.map(i => i.name);
+
+        const myarr2 =studentList.map(function (i) {
+            return i.name+"님";
+        });
+        console.log(myarr1);
+        console.log(myarr2);
+
+        //sort()는 숫자를 문자열로 바꿔서 처리한다.
+        //숫자를 sort로 정렬하려면 sort의 인자로 비교함수를 넣어주어야한다.
+        const arrNum=[13,9,10,2];
+        arrNum.sort(function(a,b){
+            // console.log("a: "+a,"b: "+b);
+            console.log(`a: ${a}`,`b: ${b}`);
+            return a-b;
+            //9-13 하면 결과값 음수 결과값이 음수인경우 두 수의 위치를 바꿔줌
+        });
+
+    </script>
+    
+</body>
+</html> 
