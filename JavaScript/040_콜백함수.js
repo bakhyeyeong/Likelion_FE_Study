@@ -48,3 +48,4 @@ arr.forEach(e => {
     result.push(e ** 2)
 })
 console.log(result)
+

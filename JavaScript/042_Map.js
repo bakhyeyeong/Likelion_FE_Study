@@ -91,4 +91,12 @@ m.entries()
 
 // Map - Object 간의 형변환
 let 맵 = new Map(Object.entries({'one':1, 'two':2}))
-let 오브젝트 = Object.fromEntries(m)
+let 오브젝트 = Object.fromEntries(맵)
+
+
+// 맵과 object 100만개 순회 test
+
+let map = new Map(); // 키 값의 중복이 안됩니다.
+map.set('이호준', 1)
+map.set('이호준', 2)
+map.set('이호준', 3)

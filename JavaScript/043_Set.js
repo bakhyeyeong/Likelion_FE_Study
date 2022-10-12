@@ -35,3 +35,27 @@ map.set('이호준', (map.get('이호준') ||  0) + 1)
 // => map.set('이호준', 3)
 map.set('김은하', (map.get('김은하') ||  0) + 1)
 // => map.set('김은하', 1)
+
+
+let s = new Set('abcdeeeeeeeee');
+s.size;
+s.add('f');
+s.has('a')
+
+// Set을 순환하기
+for (let variable of s) {
+    console.log(variable);
+}
+
+// 값이 배열인 경우
+let ss = new Set('abcdeeeeeeeee'.split(''));
+console.log(ss);
+
+let a = new Set('abc');
+let b = new Set('cde');
+// 교집합
+let cro = [...a].filter(value => b.has(value));
+// 합집합
+let union = new Set([...a].concat(...b));
+// 차집합
+let dif = [...a].filter(x => !b.has(x));

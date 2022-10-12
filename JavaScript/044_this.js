@@ -1,4 +1,3 @@
-// 점 앞에있는걸 this라고 생각
 function a(){ 
     console.log(this)
 }
@@ -40,7 +39,7 @@ let bruce = {
 }
 
 sayName();
-peter.say(); 
+peter.say();
 bruce.say();
 
 function a(){
@@ -60,3 +59,36 @@ function a(){
     b()
 }
 a()
+
+function a(){
+    console.log(this)
+    function b(){
+        console.log(this)
+        function c(){
+            console.log(this)
+        }
+        c()
+    }
+    b()
+}
+a()
+
+
+function sayName(){
+    console.log(this);
+}
+
+var c = {
+    'hello':'world',
+    'say': sayName
+}
+
+var b = {
+    'c':c
+}
+
+var a = {
+    'b':b
+}
+
+a.b.c.say()
