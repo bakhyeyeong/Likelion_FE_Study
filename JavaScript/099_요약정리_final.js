@@ -1321,8 +1321,11 @@ myP.innerHTML = "<strong>I'm Strong!!</strong>";
 
 const cont = document.querySelector(".cont");
 console.log(cont.firstElementChild); // 첫번째 자식을 찾습니다.
+console.log(cont.firstChild); //엘리먼트를 빼면 노드로 검색
 console.log(cont.lastElementChild); // 마지막 자식을 찾습니다.
+console.log(cont.lastChild);
 console.log(cont.nextElementSibling); // 다음 형제요소를 찾습니다.
+console.log(cont.nextSibling);
 console.log(cont.previousSibling); // 이전 형제노드를 찾습니다.
 console.log(cont.children); // 모든 직계자식을 찾습니다.
 console.log(cont.parentElement); // 부모 요소를 찾습니다.
